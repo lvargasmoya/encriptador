@@ -29,9 +29,9 @@ main {
 }
 .text-area {
 	float: left;
-	margin-left: 10%;
+	margin-left: 240px;
 	width: 80%;
-	height: 500px;
+	height: 400px;
 	font-size: 20px;
 	font-family: inherit;
 	font-weight: 400;
@@ -51,7 +51,7 @@ main {
 .botones {
 	width: 60%;
 	height: auto;
-	margin-left: 10%;
+	margin-left: 240px;
 }
 .informacion {
 	color: #495057;
@@ -85,14 +85,74 @@ main {
 	float: right;
 	width: 40%;
 	height: auto;
+	margin-top: 30px;
 }
 .mensaje {
 	float: right;
 	margin-right: 10%;
-	margin-bottom: 3%;
-	width: 80%;
-	height: 550px;
-	margin-top: -15%;
+	width: 28%;
+	height: 670px;
+	margin-top: -5%;
+	background: white;
+	background-image: url('/assets/Muñeco.svg');
+	background-repeat: no-repeat;
+	background-position: 30px 110px;
+	border-radius: 24px;
+	border: none;
+	color: #0a3871;
+	box-sizing: border-box;
+	box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	display: block;
+	font-size: 20px;
+	font-family: inherit;
+	font-weight: 400;
+	position: absolute;
+	cursor: not-allowed;
+}
+.contenedor-infoYbtn {
+	position: relative;
+	background-color: transparent;
+	width: 60%;
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	padding: 3px 0 30px 35px;
+	height: 75vh;
+}
+.contenedor-infoYbtn h3 {
+	background-color: transparent;
+	margin-left: 0px;
+	margin-top: 370px;
+	margin-bottom: 5px;
+	color: rgb(70, 70, 70);
+	text-align: center;
+	font-family: 'Inter';
+	font-weight: 500;
+}
+.contenedor-infoYbtn p {
+	background-color: transparent;
+	margin-left: 20px;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: center;
+	color: rgb(82, 81, 81);
+}
+.contenedor-infoYbtn .btn-copiar {
+	border: 1px solid #0a3871;
+	border-radius: 24px;
+	color: #0a3871;
+	cursor: pointer;
+	height: 67px;
+	width: 336px;
+	font-size: 16px;
+	font-weight: 400;
+	position: relative;
+	display: none;
+	margin-top: 450px;
 }
 /* .logo {
 	padding-top: 20px;
