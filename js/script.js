@@ -20,6 +20,7 @@ function btnEncriptar() {
 	mensaje.value = textoEncriptado;
 	textArea.value = '';
 	mensaje.style.backgroundImage = 'none';
+	mensaje.style.padding = '70px';
 	h3Mensaje.style.display = 'none';
 	pMensaje.style.display = 'none';
 	buttonMensaje.style.display = 'block';
@@ -29,6 +30,7 @@ function btnDesencriptar() {
 	const textoEncriptado = desencriptar(textArea.value);
 	mensaje.value = textoEncriptado;
 	textArea.value = '';
+	mensaje.style.padding = '70px';
 }
 
 function encriptar(stringEncriptado) {
@@ -51,7 +53,7 @@ function encriptar(stringEncriptado) {
 	}
 	return stringEncriptado;
 }
-function desencriptar(stringdesencriptado) {
+function desencriptar(stringDesencriptado) {
 	let matrizCodigo = [
 		['e', 'enter'],
 		['i', 'imes'],
@@ -59,15 +61,26 @@ function desencriptar(stringdesencriptado) {
 		['o', 'ober'],
 		['u', 'ufat'],
 	];
-	stringdesencriptado = stringdesencriptado.toLowerCase();
+	stringDesencriptado = stringDesencriptado.toLowerCase();
 
 	for (let i = 0; i < matrizCodigo.length; i++) {
-		if (stringEncriptado.includes(matrizCodigo[i][1])) {
-			stringdesencriptado = stringdesencriptado.replaceAll(
+		if (stringDesencriptado.includes(matrizCodigo[i][1])) {
+			stringDesencriptado = stringDesencriptado.replaceAll(
 				matrizCodigo[i][1],
 				matrizCodigo[i][0]
 			);
 		}
 	}
-	return stringdesencriptado;
+	return stringDesencriptado;
+}
+function copyToClipboard() {
+	const textarea = document.getElementById('mensaje');
+	navigator.clipboard
+		.writeText(textarea.value)
+		.then(() => {
+			console.log('Text successfully copied to clipboard');
+		})
+		.catch((error) => {
+			console.error('Copying to clipboard failed:', error);
+		});
 }
