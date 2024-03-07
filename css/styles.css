@@ -211,7 +211,7 @@ main {
 		margin-left: 30px;
 	}
 }
-/* for mobile view 	S*/
+/* for mobile view 	M*/
 @media only screen and (width: 375px) {
 	main {
 		display: flex;
@@ -268,6 +268,61 @@ main {
 	.contenedor-infoYbtn .btn-copiar {
 		margin-top: 260px;
 		margin-left: -17px;
+	}
+}
+
+/* for mobile view 	L*/
+@media only screen and (width: 425px) {
+	main {
+		flex-direction: column;
+	}
+	.contenedor-text-area {
+		width: 100%;
+	}
+	.text-area {
+		margin-left: 20px;
+		width: 100%;
+	}
+	.info,
+	.botones {
+		margin-left: 0;
+		width: 100%;
+	}
+	.informacion {
+		font-size: 14px;
+		margin-left: 10px;
+	}
+	.btn-encriptar {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.btn-desencriptar {
+		margin-left: 0;
+		width: 100%;
+	}
+	.contenedor-mensaje {
+		width: 80%;
+		margin-top: 30px;
+		margin-left: -48px;
+	}
+	.mensaje {
+		float: right;
+		margin-left: -1%;
+		width: 90%;
+		height: 400px;
+		background: white;
+	}
+	.contenedor-infoYbtn {
+		width: 90%;
+		margin-left: 10px;
+		height: 60vh;
+	}
+	.contenedor-infoYbtn h3 {
+		margin-top: 100px;
+	}
+	.contenedor-infoYbtn .btn-copiar {
+		margin-top: 302px;
+		margin-left: -23px;
 	}
 }
 /* for tablet view
