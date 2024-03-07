@@ -325,7 +325,52 @@ main {
 		margin-left: -23px;
 	}
 }
-/* for tablet view
-@media only screen and (max-width: 769px) {
+/*for tablet view*/
+@media only screen and (max-width: 768px) {
+	main {
+		flex-direction: column;
+	}
+	.contenedor-text-area {
+		width: 98%;
+	}
+	.text-area {
+		width: 98%;
+
+		margin-left: 20px;
+	}
+	.info,
+	.botones {
+		width: 96%;
+		margin-left: 43px;
+	}
+	.informacion {
+		margin-left: 10px;
+	}
+	.contenedor-mensaje {
+		width: 98%;
+		margin-top: 30px;
+	}
+	.mensaje {
+		width: 96%;
+		height: 470px;
+		background: white;
+		padding: 30px !important;
+	}
+	.contenedor-infoYbtn {
+		width: 98%;
+		height: 66vh;
+	}
+	.contenedor-infoYbtn h3 {
+		margin-left: -41px;
+		margin-top: 170px;
+		padding-top: 30px;
+	}
+	.contenedor-infoYbtn p {
+		margin-left: -44px;
+	}
+	.contenedor-infoYbtn .btn-copiar {
+		height: 66px;
+		margin-top: 339px;
+		margin-left: 176px;
+	}
 }
-*/
