@@ -1,4 +1,5 @@
 const textArea = document.querySelector('.text-area');
+const placeholderText = textArea.placeholder;
 const mensaje = document.querySelector('.mensaje');
 const h3Mensaje = document.querySelector('.info-h3');
 const pMensaje = document.querySelector('.info-p');
@@ -83,4 +84,34 @@ function copyToClipboard() {
 		.catch((error) => {
 			console.error('Copying to clipboard failed:', error);
 		});
+}
+
+function toggleDarkMode() {
+	const bodyElement = document.body;
+	const imageElement = document.querySelector('#my-image');
+
+	bodyElement.classList.toggle('dark-mode');
+
+	const textColor = bodyElement.classList.contains('dark-mode')
+		? '--main-light'
+		: '--main-dark';
+	bodyElement.style.color = `var(${textColor})`;
+
+	const placeholderColor = bodyElement.classList.contains('dark-mode')
+		? '--placeholder-light'
+		: '--placeholder-dark';
+	placeholderText.style.color = `var(${placeholderColor})`;
+
+	h3Mensaje.forEach((h3) => {
+		h3.style.color = `var(${textColor})`;
+	});
+	pMensaje.forEach((p) => {
+		p.style.color = `var(${textColor})`;
+	});
+
+	if (bodyElement.classList.contains('dark-mode')) {
+		imageElement.src = 'path/to/dark-image.png'; // Replace with your dark image path
+	} else {
+		imageElement.src = 'path/to/light-image.png'; // Replace with your light image path
+	}
 }

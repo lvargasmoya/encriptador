@@ -1,5 +1,21 @@
-* {
-	background: #f3f5fc;
+:root {
+	--background-light: #f3f5fc;
+	--background-dark: #1a1a1a;
+	--main-light: #0a3871;
+	--main-dark: #f3f5fc;
+	--placeholder-light: #0a3871;
+	--placeholder-dark: #aaaaaa;
+	--informacion-light: #495057;
+	--informacion-dark: #77787a;
+	--btn-light: #d8dfe8;
+	--h3-light: #464646;
+	--h3-dark: #b4b4b4;
+	--p-light: #515151;
+	--p-dark: #8e8e8e;
+}
+
+body {
+	background-color: var(--background-light);
 	font-family: 'Inter';
 }
 header {
@@ -8,6 +24,21 @@ header {
 	margin-right: 90%;
 	margin-bottom: 10px;
 	margin-top: 10px;
+}
+.dark {
+	margin-left: 90%;
+	position: absolute;
+	margin-top: 25px;
+}
+.dark-mode {
+	background: var(--background-dark);
+	color: var(--main-light);
+	::placeholder {
+		color: var(--main-dark);
+	}
+	h6 {
+		color: var(--main-dark);
+	}
 }
 .logo {
 	width: 100%;
@@ -37,12 +68,13 @@ main {
 	font-weight: 400;
 	padding: 10px;
 	box-sizing: border-box;
-	color: #0a3871;
+	color: var(--text-light);
 	text-transform: lowercase;
 	border: none;
+	background-color: inherit;
 }
 ::placeholder {
-	color: #0a3871;
+	color: var(--placeholder-light);
 }
 .text-area:focus {
 	outline: none;
@@ -54,14 +86,14 @@ main {
 	margin-left: 240px;
 }
 .informacion {
-	color: #495057;
+	color: var(--informacion-light);
 	font-size: 12px;
 }
 .btn-desencriptar {
-	background: #d8dfe8;
-	border: 1px solid #0a3871;
+	background: var(--btn-light);
+	border: 1px solid var(--text-light);
 	border-radius: 24px;
-	color: #0a3871;
+	color: var(--text-light);
 	cursor: pointer;
 	height: 67px;
 	margin-left: 3%;
@@ -70,10 +102,10 @@ main {
 	font-weight: 400;
 }
 .btn-encriptar {
-	background-color: #0a3871;
-	border: 1px solid #0a3871;
+	background-color: var(--main-light);
+	border: 1px solid var(--main-light);
 	border-radius: 24px;
-	color: white;
+	color: var(--main-dark);
 	cursor: pointer;
 	height: 67px;
 	width: 45%;
@@ -93,13 +125,13 @@ main {
 	width: 28%;
 	height: 670px;
 	margin-top: -5%;
-	background: white;
+	background: var(--background-light);
 	background-image: url('../assets/Muneco.svg');
 	background-repeat: no-repeat;
 	background-position: 30px 110px;
 	border-radius: 24px;
 	border: none;
-	color: #0a3871;
+	color: var(--main-light);
 	box-sizing: border-box;
 	box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.5);
 	padding: 20px;
@@ -125,7 +157,7 @@ main {
 	margin-left: 0px;
 	margin-top: 370px;
 	margin-bottom: 5px;
-	color: rgb(70, 70, 70);
+	color: var(--h3-light);
 	text-align: center;
 	font-family: 'Inter';
 	font-weight: 500;
@@ -139,12 +171,12 @@ main {
 	margin-top: 0;
 	margin-bottom: 10px;
 	text-align: center;
-	color: rgb(82, 81, 81);
+	color: var(--p-light);
 }
 .contenedor-infoYbtn .btn-copiar {
-	border: 1px solid #0a3871;
+	border: 1px solid var(--main-light);
 	border-radius: 24px;
-	color: #0a3871;
+	color: var(--main-light);
 	cursor: pointer;
 	height: 67px;
 	width: 336px;
