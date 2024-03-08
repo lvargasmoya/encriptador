@@ -12,10 +12,16 @@
 		<title>Encriptador|Alura</title>
 	</head>
 	<body>
-		<button class="dark" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 		<header>
-			<img class="logo" src="assets/Logo.svg" alt="logo" />
+			<img class="logo" src="assets/Logo.png" alt="logo" />
 		</header>
+		<div class="toggle-switch">
+			<label>
+				<input type="checkbox" onclick="toggleDarkMode()" />
+				<span class="slider"></span>
+			</label>
+		</div>
+
 		<main>
 			<section class="contenedor-text-area">
 				<textarea

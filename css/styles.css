@@ -7,16 +7,21 @@
 	--placeholder-dark: #aaaaaa;
 	--informacion-light: #495057;
 	--informacion-dark: #77787a;
-	--btn-light: #d8dfe8;
+	--btn-light: #c0c6ce;
 	--h3-light: #464646;
 	--h3-dark: #b4b4b4;
 	--p-light: #515151;
 	--p-dark: #8e8e8e;
 }
 
-body {
+body,
+html {
 	background-color: var(--background-light);
 	font-family: 'Inter';
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden; /* Prevents horizontal scrolling */
+	height: auto;
 }
 header {
 	position: relative;
@@ -32,17 +37,82 @@ header {
 }
 .dark-mode {
 	background: var(--background-dark);
-	color: var(--main-light);
+	position: relative;
+	z-index: -1;
+	color: var(--main-dark);
+	height: 100vh;
 	::placeholder {
-		color: var(--main-dark);
+		color: var(--placeholder-dark);
 	}
 	h6 {
 		color: var(--main-dark);
 	}
+	textarea {
+		color: var(--main-dark);
+	}
+	.mensaje {
+		background-color: var(--placeholder-dark);
+		color: var(--main-light);
+	}
 }
+/******* boton *******/
+.toggle-switch {
+	position: absolute;
+	width: 200px;
+	margin-left: 89%;
+	margin-top: -50px;
+}
+
+label {
+	position: absolute;
+	width: 70%;
+	height: 50px;
+	background-color: var(--main-light);
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+input {
+	position: absolute;
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	width: 0%;
+	height: 30%;
+	border-radius: 50px;
+	transition: 0.3s;
+}
+
+input:checked ~ .slider {
+	background-color: var(--main-light);
+}
+
+.slider::before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	box-shadow: inset 10px -3px 0px 1px var(--main-dark);
+	background-color: var(--main-light);
+	transition: 0.3s;
+}
+
+input:checked ~ .slider::before {
+	transform: translateX(95px);
+	background-color: var(--main-dark);
+	box-shadow: none;
+}
+
+/*** fin boton ********/
+
 .logo {
-	width: 100%;
-	left: 0;
+	width: 40px;
+	left: 20px;
 	position: absolute;
 	height: 50px;
 }
@@ -91,9 +161,9 @@ main {
 }
 .btn-desencriptar {
 	background: var(--btn-light);
-	border: 1px solid var(--text-light);
+	border: 1px solid var(--main-light);
 	border-radius: 24px;
-	color: var(--text-light);
+	color: var(--main-light);
 	cursor: pointer;
 	height: 67px;
 	margin-left: 3%;
@@ -125,7 +195,7 @@ main {
 	width: 28%;
 	height: 670px;
 	margin-top: -5%;
-	background: var(--background-light);
+	background: white;
 	background-image: url('../assets/Muneco.svg');
 	background-repeat: no-repeat;
 	background-position: 30px 110px;

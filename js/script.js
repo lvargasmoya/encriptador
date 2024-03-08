@@ -1,9 +1,9 @@
 const textArea = document.querySelector('.text-area');
 const placeholderText = textArea.placeholder;
 const mensaje = document.querySelector('.mensaje');
+const buttonMensaje = document.querySelector('.btn-copiar');
 const h3Mensaje = document.querySelector('.info-h3');
 const pMensaje = document.querySelector('.info-p');
-const buttonMensaje = document.querySelector('.btn-copiar');
 
 /* La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -12,7 +12,7 @@ La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat" */
 textArea.addEventListener('keydown', (e) => {
 	if (e.key === 'Enter') {
-		e.preventDefault(); // Prevent Enter key behavior
+		e.preventDefault();
 	}
 });
 
@@ -88,7 +88,7 @@ function copyToClipboard() {
 
 function toggleDarkMode() {
 	const bodyElement = document.body;
-	const imageElement = document.querySelector('#my-image');
+	const imageElement = document.querySelector('.logo');
 
 	bodyElement.classList.toggle('dark-mode');
 
@@ -97,21 +97,9 @@ function toggleDarkMode() {
 		: '--main-dark';
 	bodyElement.style.color = `var(${textColor})`;
 
-	const placeholderColor = bodyElement.classList.contains('dark-mode')
-		? '--placeholder-light'
-		: '--placeholder-dark';
-	placeholderText.style.color = `var(${placeholderColor})`;
-
-	h3Mensaje.forEach((h3) => {
-		h3.style.color = `var(${textColor})`;
-	});
-	pMensaje.forEach((p) => {
-		p.style.color = `var(${textColor})`;
-	});
-
 	if (bodyElement.classList.contains('dark-mode')) {
-		imageElement.src = 'path/to/dark-image.png'; // Replace with your dark image path
+		imageElement.src = '/assets/Logo_blanco.png';
 	} else {
-		imageElement.src = 'path/to/light-image.png'; // Replace with your light image path
+		imageElement.src = '/assets/Logo.png';
 	}
 }
