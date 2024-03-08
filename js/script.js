@@ -98,8 +98,8 @@ function toggleDarkMode() {
 	bodyElement.style.color = `var(${textColor})`;
 
 	if (bodyElement.classList.contains('dark-mode')) {
-		imageElement.src = '/assets/Logo_blanco.png';
+		imageElement.src = 'assets/Logo_blanco.png';
 	} else {
-		imageElement.src = '/assets/Logo.png';
+		imageElement.src = 'assets/Logo.png';
 	}
 }
